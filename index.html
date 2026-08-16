@@ -1,35 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
   <title>emo gurl</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- stealth option: uncomment to keep the whole site out of search engines
+  <meta name="robots" content="noindex"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Mono:wght@400;500&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- subpages: use ../styles.css instead -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <a href="./">Home</a>
-    <a href="cv/">CV</a>
-    <a href="misc/">Misc</a>
-    <a href="personal/">Personal</a>
-  </nav>
 
-  <h1>emo gurl</h1>
-  <p>Undergraduate in mathematics, working on fractal geometry and dynamical
-  systems. Current focus is products of random matrices, particularly the
-  behaviour of Lyapunov exponents under weak assumptions on the driving
-  distribution. Before this, differential geometry, which still shapes how I
-  think about most things.</p>
+  <header class="site-top">
+    <div class="container bar">
+      <a class="brand" href="./">emo gurl</a>
+      <!-- subpages: prefix these hrefs with ../ and move aria-current.
+           adjust folder names if yours differ -->
+      <nav aria-label="site">
+        <a href="./" aria-current="page">home</a>
+        <a href="academic/">academic</a>
+        <a href="misc/">misc</a>
+        <a href="cv/">cv</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Research interests</h2>
-  <ul>
-    <li>meow meow meow</li>
-    <li>rah rah rah</li>
-    <li>he he he</li>
-    <li>:3 :3 :3</li>
-  </ul>
+  <main class="container center">
 
-  <p>Contact: <a href="mailto:placeholder@example.com">placeholder@example.com</a></p>
+    <section class="masthead">
+      <h1>emo gurl</h1>
+      <p class="tagline">ergodic theory · probability · geometry</p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>about</h2>
+      <p>
+        I do math :3 — lately random matrix products, top Lyapunov
+        exponents, and the ergodic theory underneath them. Before that:
+        differential forms, manifolds, and more time than I'd admit
+        thinking about the genus of surfaces.
+      </p>
+      <p>
+        This site holds my notes, some longer proofs written out properly,
+        and one page of things that have nothing to do with math.
+      </p>
+    </section>
+
+    <section>
+      <h2>current interests</h2>
+      <ul class="interests">
+        <li>
+          <span class="k">random matrix products &amp; Lyapunov exponents</span>
+          <span class="m">probability</span>
+        </li>
+        <li>
+          <span class="k">Birkhoff &amp; the ergodic theorems</span>
+          <span class="m">dynamics</span>
+        </li>
+        <li>
+          <span class="k">differential forms, manifolds, Stokes</span>
+          <span class="m">geometry</span>
+        </li>
+        <li>
+          <span class="k">surfaces &amp; genus</span>
+          <span class="m">topology</span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="container bar">
+      <span>&copy; 2026 emo gurl</span>
+      <span>last updated 2026-08-16</span>
+    </div>
+  </footer>
+
 </body>
 </html>
