@@ -1,5 +1,5 @@
 /* ============================================================
-   babyseal · styles.css  (lives at repo root)
+   babyseal · style.css  (lives at repo root)
    dark editorial base for every page.
    full y2k garnish will live on /misc only.
    ============================================================ */
@@ -18,7 +18,7 @@
     --accent: #aab4c2;
     /* chrome silver. oxblood alt: #8b1e2d */
     --accent-hi: #dde3ea;
-    /* hover + caret, icy. oxblood alt: #c05468 */
+    /* hover, icy. oxblood alt: #c05468 */
 
     /* swapping display face to Bodoni Moda? also update the fonts <link> */
     --font-display: "Cormorant Garamond", "Bodoni Moda", Didot, serif;
@@ -150,29 +150,6 @@ main.container {
     letter-spacing: -0.015em;
 }
 
-/* the signature: a terminal caret blinking inside a couture serif */
-.masthead h1::after {
-    content: "";
-    display: inline-block;
-    width: 0.055em;
-    height: 0.72em;
-    margin-left: 0.14em;
-    background: var(--accent-hi);
-    animation: blink 1.1s step-end infinite;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
 .masthead .tagline {
     margin-top: 1.4rem;
     font-family: var(--font-mono);
@@ -281,11 +258,4 @@ p+p {
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--muted);
-}
-
-/* ---------- motion ---------- */
-@media (prefers-reduced-motion: reduce) {
-    .masthead h1::after {
-        animation: none;
-    }
 }
