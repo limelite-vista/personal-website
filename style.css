@@ -1,24 +1,25 @@
 /* ============================================================
    babyseal · style.css  (lives at repo root)
-   dark editorial base for every page.
+   white editorial base for every page.
    full y2k garnish will live on /misc only.
    ============================================================ */
 
 /* ---------- tokens: change the look here ---------- */
 :root {
-    color-scheme: dark;
+    color-scheme: light;
 
-    --bg: #0c0c0d;
-    /* near-black. pure #000 causes halation on long proofs */
-    --ink: #e7e3da;
-    /* bone, slightly warm against the cool black */
-    --muted: #8f8b83;
-    --line: #26262a;
-    /* hairline rules */
-    --accent: #aab4c2;
-    /* chrome silver. oxblood alt: #8b1e2d */
-    --accent-hi: #dde3ea;
-    /* hover, icy. oxblood alt: #c05468 */
+    --bg: #fcfcfb;
+    /* paper white, a hair off pure so long reads don't glare */
+    --ink: #141416;
+    /* soft black */
+    --muted: #6f7076;
+    /* graphite, secondary text */
+    --line: #e4e4e6;
+    /* pale hairlines */
+    --accent: #a2abb8;
+    /* chrome silver: underlines, borders, selection */
+    --accent-hi: #5c6673;
+    /* gunmetal: hover + focus, darker so it reads on white */
 
     /* swapping display face to Bodoni Moda? also update the fonts <link> */
     --font-display: "Cormorant Garamond", "Bodoni Moda", Didot, serif;
@@ -73,10 +74,10 @@ a:hover {
 
 ::selection {
     background: var(--accent);
-    color: var(--bg);
+    color: var(--ink);
 }
 
-/* dark text on silver */
+/* ink text on the silver highlight */
 
 /* ---------- layout shell ---------- */
 .container {
@@ -132,8 +133,6 @@ main.container {
 
 .site-top nav a[aria-current="page"] {
     color: var(--ink);
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 2px;
 }
 
 /* ---------- masthead ---------- */
