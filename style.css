@@ -145,7 +145,7 @@ main.container {
 .masthead h1 {
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: clamp(3.25rem, 9vw + 1rem, 7rem);
+    font-size: clamp(2.25rem, 5vw + 1rem, 4rem);
     line-height: 0.95;
     letter-spacing: -0.015em;
 }
