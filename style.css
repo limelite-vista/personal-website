@@ -8,11 +8,13 @@
 :root {
     color-scheme: light;
 
-    --bg: #fcfcfb;
-    /* paper white, a hair off pure so long reads don't glare */
+    --bg: #f1f2f4;
+    /* soft silver-gray page, so the frames stand out */
+    --panel: #fcfcfb;
+    /* paper white inside the frames */
     --ink: #141416;
     /* soft black */
-    --muted: #6f7076;
+    --muted: #64656c;
     /* graphite, secondary text */
     --line: #e4e4e6;
     /* pale hairlines */
@@ -21,11 +23,10 @@
     --accent-hi: #5c6673;
     /* gunmetal: hover + focus, darker so it reads on white */
 
-    /* swapping display face to Bodoni Moda? also update the fonts <link> */
-    --font-display: "Cormorant Garamond", "Bodoni Moda", Didot, serif;
-    --font-body: "STIX Two Text", Georgia, serif;
-    /* harmonizes with KaTeX later */
-    --font-mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+    /* one family everywhere, stock google-sites style */
+    --font-display: "Open Sans", "Segoe UI", Arial, sans-serif;
+    --font-body: "Open Sans", "Segoe UI", Arial, sans-serif;
+    --font-mono: "Open Sans", "Segoe UI", Arial, sans-serif;
 
     --wide: 62rem;
     /* header + footer bars */
@@ -137,6 +138,7 @@ main.container {
 
 /* ---------- masthead (frameless) ---------- */
 .masthead {
+    background: transparent;
     border: 0;
     margin-block: 0;
     padding: clamp(3rem, 8vw, 5rem) 0 clamp(2rem, 5vw, 3rem);
@@ -144,7 +146,7 @@ main.container {
 
 .masthead h1 {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 600;
     font-size: clamp(2.25rem, 5vw + 1rem, 4rem);
     line-height: 0.95;
     letter-spacing: -0.015em;
@@ -161,6 +163,7 @@ main.container {
 
 /* ---------- sections: silver frames ---------- */
 main section {
+    background: var(--panel);
     border: 1px solid var(--accent);
     padding: 1.5rem;
     margin-block: 2.5rem;
