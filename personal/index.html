@@ -82,11 +82,22 @@
 
     <footer class="site-foot">
         <div class="container bar">
-            <span>&copy; 2026 babyseal</span>
-            <span>last updated 2026-08-16</span>
+            <span id="updated">last updated —</span>
         </div>
     </footer>
 
+    <script>
+    let p = location.pathname.split("/personal-website/")[1] || "";
+    if (!p.endsWith(".html")) p += "index.html";
+    fetch("https://api.github.com/repos/limelite-vista/personal-website/commits?per_page=1&path=" + p)
+        .then(r => r.json())
+        .then(d => {
+            const t = new Date(d[0].commit.committer.date);
+            document.getElementById("updated").textContent =
+                "last updated " + t.toISOString().slice(0, 10);
+        })
+        .catch(() => { });
+    </script>
 </body>
 
 </html>
