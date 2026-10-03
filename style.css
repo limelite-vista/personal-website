@@ -239,3 +239,18 @@ p+p {
     text-transform: uppercase;
     color: var(--muted);
 }
+
+/* Mathematics: compact entry headings within the existing silver panels. */
+.math-page section > h3 {
+    margin-top: 1.25rem;
+}
+
+.math-page .entry-meta {
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.math-page .masthead .tagline {
+    line-height: 1.7;
+    letter-spacing: 0.12em;
+}
