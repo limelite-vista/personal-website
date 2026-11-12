@@ -2,21 +2,23 @@
 :root {
     color-scheme: light;
     --bg: #ffffff;
-    --panel: #faf9f4;
-    --ink: #252d29;
-    --muted: #646c61;
-    --line: #d6d9cc;
-    --accent: #44604e;
-    --accent-hi: #294535;
+    --panel: #edf7f6;
+    --ink: #203b3b;
+    --muted: #506868;
+    --line: #b9d7d4;
+    --accent: #009193;
+    --accent-hi: #064e50;
     --font-display: Georgia, "Times New Roman", serif;
     --font-body: "Segoe UI", Helvetica, Arial, sans-serif;
     --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-    --wide: 76rem;
+    --wide: 68rem;
     --measure: 51rem;
 }
 * { box-sizing: border-box; margin: 0; }
 body {
     background: var(--bg);
+    min-height: 100vh;
+    border: 12px solid var(--accent);
     color: var(--ink);
     font-family: var(--font-body);
     font-size: 1rem;
@@ -24,21 +26,22 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 img, svg { display: block; max-width: 100%; }
-a { color: inherit; text-underline-offset: .25em; text-decoration-color: #82917e; }
+a { color: inherit; text-underline-offset: .25em; text-decoration-color: var(--accent); }
 a:hover { color: var(--accent-hi); text-decoration-color: currentColor; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
-::selection { background: #dbe3ce; color: var(--ink); }
+::selection { background: #c8e9e5; color: var(--ink); }
 .container { max-width: var(--wide); margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 4rem); }
 main.container { max-width: var(--measure); }
 .bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem 2rem; }
-.site-top .bar { min-height: 6.5rem; padding-block: 1.5rem; }
-.site-top .brand { font-family: var(--font-display); font-size: 1.7rem; font-style: italic; letter-spacing: -.06em; text-decoration: none; }
-.site-top nav { display: flex; flex-wrap: wrap; gap: .6rem 1.6rem; }
-.site-top nav a { color: var(--muted); font-size: .8rem; text-decoration: none; padding-block: .35rem; border-bottom: 1px solid transparent; }
-.site-top nav a:hover, .site-top nav a[aria-current="page"] { color: var(--ink); border-color: var(--accent); }
+.site-top .bar { min-height: 5.5rem; padding-block: 1.25rem; }
+.site-top .brand { color: var(--accent); font-family: var(--font-display); font-size: 1.65rem; font-weight: 700; text-decoration: none; }
+.site-top nav { display: flex; flex-wrap: wrap; gap: .25rem; background: var(--accent); padding: .3rem; }
+.site-top nav a { color: white; font-size: .85rem; font-weight: 600; text-decoration: none; padding: .4rem 1rem; border: 2px solid transparent; }
+.site-top nav a:hover, .site-top nav a[aria-current="page"] { color: var(--accent-hi); background: white; }
+.site-top nav a:focus-visible { outline-color: white; outline-offset: 0; }
 .skip-link { position: absolute; left: 1rem; top: -5rem; background: var(--panel); padding: .5rem 1rem; z-index: 10; }
 .skip-link:focus { top: 1rem; }
-main section { margin-block: 2.5rem; padding-block: 2rem; border-top: 1px solid var(--line); }
+main section { margin-block: 2.5rem; padding-block: 2rem; border-top: 4px solid var(--accent); }
 .masthead { border: 0; padding-block: 3rem 1rem; }
 .masthead h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.8rem, 7vw, 5rem); line-height: 1.1; letter-spacing: -.055em; overflow-wrap: anywhere; }
 .masthead .tagline, .eyebrow, .section-label { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
@@ -52,28 +55,37 @@ hr.rule { border: 0; border-top: 1px solid var(--line); }
 .interests li { padding-block: .6rem; }
 .interests .k { font-style: italic; }
 .interests .m { color: var(--muted); font-family: var(--font-mono); font-size: .7rem; }
-.site-foot { margin-top: 5rem; }
-.site-foot .bar { border-top: 1px solid var(--line); padding-block: 1.5rem 2.5rem; color: var(--muted); font-family: var(--font-mono); font-size: .65rem; letter-spacing: .04em; }
+.note-list { list-style: none; padding: 0; margin-top: 1.75rem; }
+.note-list li { padding-block: 1.5rem; border-top: 1px solid var(--line); }
+.note-list h3 { margin: 0 0 .5rem; }
+.note-list h3 a { color: var(--accent-hi); }
+.note-list .note-kind { color: var(--muted); font-size: .85rem; margin: 0 0 .65rem; }
+.note-list p + p { margin-top: 0; }
+.note-format { display: inline-block; font-family: var(--font-mono); font-size: .65rem; font-weight: 400; vertical-align: middle; margin-left: .5rem; }
+.site-foot { margin-top: 2rem; }
+.site-foot .bar { border-top: 4px solid var(--accent); padding-block: 1.5rem 2.5rem; color: var(--muted); font-family: var(--font-mono); font-size: .65rem; letter-spacing: .04em; }
 .section-copy .entry-meta { color: var(--muted); font-size: .85rem; margin-bottom: 1rem; }
 .section-copy { max-width: 40rem; min-width: 0; }
 .section-copy > h3:first-child { margin-top: 0; }
 .section-copy p { font-size: .95rem; }
 .home-row[id] { scroll-margin-top: 2rem; }
-/* Home: generous type, a mathematical figure, and a compact reading index. */
+/* Home: a compact academic profile with strong teal rules. */
 main.home-page { max-width: var(--wide); }
-.home-page .hero { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 2rem; margin: 1.5rem 0 0; padding: 3rem 0 4rem; border-top: 0; }
+.home-page .hero { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; align-items: center; gap: 3rem; margin: 0; padding: 2.25rem 0 2.75rem; border-top: 6px solid var(--accent); }
 .hero .eyebrow { display: flex; align-items: center; gap: .7rem; }
 .hero .eyebrow::before { content: ""; width: .4rem; height: .4rem; background: var(--accent); border-radius: 50%; }
-.hero h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(5rem, 10.5vw, 9rem); letter-spacing: -.075em; line-height: 1.15; margin: .65rem 0 1rem; }
-.hero-intro { font-family: var(--font-display); font-size: clamp(1.45rem, 2.5vw, 1.9rem); line-height: 1.4; }
-.hero-note { max-width: 24rem; font-size: .9rem; color: var(--muted); margin-top: .9rem; }
-.text-link { display: inline-flex; align-items: center; gap: 2rem; margin-top: 1.7rem; padding-bottom: .35rem; border-bottom: 1px solid var(--accent); font-size: .8rem; text-decoration: none; }
+.hero h1 { color: var(--accent); font-family: var(--font-display); font-weight: 700; font-size: clamp(3rem, 6vw, 4.5rem); letter-spacing: -.035em; line-height: 1.1; margin: 0 0 .8rem; }
+.hero-intro { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.4; }
+.hero-note { max-width: 35rem; font-size: 1rem; color: var(--ink); margin-top: 1rem; }
+.text-link { display: inline-flex; align-items: center; gap: 2rem; margin-top: 1.7rem; padding-bottom: .35rem; border-bottom: 2px solid var(--accent); font-size: .85rem; text-decoration: none; }
 .text-link span { transition: transform .2s ease; }
 .text-link:hover span { transform: translateX(4px); }
 .fractal { margin: 0; color: var(--accent); }
 .fractal svg { width: 100%; height: auto; }
 .fractal figcaption { text-align: center; font-family: var(--font-mono); font-size: .6rem; color: var(--muted); letter-spacing: .06em; }
-.home-page .home-row { display: grid; grid-template-columns: 13rem 1fr; gap: 2rem; margin: 0; padding: 2.5rem 0 3rem; }
+.home-page .home-row { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 2.5rem; margin: 0; padding: 2rem 0 2.5rem; border-top: 4px solid var(--accent); }
+.home-row .section-label { color: var(--accent); font-family: var(--font-display); font-size: 1.65rem; font-weight: 700; letter-spacing: -.02em; text-transform: none; padding-top: 0; margin-bottom: 0; }
+.section-copy > h3 { font-size: 1.35rem; font-weight: 700; }
 .section-label { padding-top: .35rem; }
 .section-label span { display: inline-block; width: 2.5rem; color: var(--accent); }
 .about-copy { max-width: 40rem; }
@@ -90,8 +102,9 @@ main.home-page { max-width: var(--wide); }
     .site-top .bar { gap: .75rem; padding-block: 1.2rem; }
     .site-top nav { gap: .4rem 1.1rem; }
     .home-page .hero { grid-template-columns: 1fr; padding: 2rem 0 2.5rem; gap: 1.5rem; }
-    .hero h1 { font-size: clamp(4.5rem, 18vw, 7rem); }
-    .fractal { max-width: 21rem; width: 100%; margin-inline: auto; }
+    body { border-width: 6px; }
+    .hero h1 { font-size: clamp(3rem, 13vw, 4.5rem); }
+    .fractal { max-width: 15rem; width: 100%; margin-inline: auto; }
     .home-page .home-row { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 2rem; }
     .section-label { font-size: .65rem; }
     .site-foot { margin-top: 2rem; }
