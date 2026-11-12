@@ -54,8 +54,11 @@ hr.rule { border: 0; border-top: 1px solid var(--line); }
 .interests .m { color: var(--muted); font-family: var(--font-mono); font-size: .7rem; }
 .site-foot { margin-top: 5rem; }
 .site-foot .bar { border-top: 1px solid var(--line); padding-block: 1.5rem 2.5rem; color: var(--muted); font-family: var(--font-mono); font-size: .65rem; letter-spacing: .04em; }
-.math-page .entry-meta { color: var(--muted); font-size: .85rem; margin-bottom: 1rem; }
-.math-page section > h3 { margin-top: 1.5rem; }
+.section-copy .entry-meta { color: var(--muted); font-size: .85rem; margin-bottom: 1rem; }
+.section-copy { max-width: 40rem; min-width: 0; }
+.section-copy > h3:first-child { margin-top: 0; }
+.section-copy p { font-size: .95rem; }
+.home-row[id] { scroll-margin-top: 2rem; }
 /* Home: generous type, a mathematical figure, and a compact reading index. */
 main.home-page { max-width: var(--wide); }
 .home-page .hero { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 2rem; margin: 1.5rem 0 0; padding: 3rem 0 4rem; border-top: 0; }
