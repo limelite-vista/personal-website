@@ -16,6 +16,8 @@
 }
 * { box-sizing: border-box; margin: 0; }
 body {
+    display: flex;
+    flex-direction: column;
     background: var(--bg);
     min-height: 100vh;
     border: 12px solid var(--accent);
@@ -24,6 +26,10 @@ body {
     font-size: 1rem;
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
+}
+body > main {
+    flex: 1;
+    width: 100%;
 }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-underline-offset: .25em; text-decoration-color: var(--accent); }
