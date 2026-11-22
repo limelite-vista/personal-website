@@ -18,8 +18,8 @@ the PDF in this repository or the published website.
 
    ```sh
    git status --short
-   git diff -- misc/index.html
-   git add files/notes misc/index.html scripts/sync_notes.py README.md
+   git diff -- Notes/index.html
+   git add files/notes Notes/index.html scripts/sync_notes.py README.md
    git commit -m "Update website notes"
    git push origin main
    ```
@@ -55,4 +55,4 @@ python3 scripts/sync_notes.py --check
 
 This checks PDF contents, not whether the PDFs have been recompiled after a LaTeX
 edit. To add a different document later, add its source/destination pair to
-`NOTES` in the script and a link in `misc/index.html`.
+`NOTES` in the script and a link in `Notes/index.html`.

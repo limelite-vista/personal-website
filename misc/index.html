@@ -1,97 +1,19 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>misc · babyseal</title>
-
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖤</text></svg>">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Mono:wght@400;500&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="refresh" content="0; url=../Notes/">
+    <title>Notes · babyseal</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
-
-  <header class="site-top">
-    <div class="container bar">
-      <a class="brand" href="../">babyseal</a>
-      <nav aria-label="site">
-        <a href="../">home</a>
-        <a href="../misc/" aria-current="page">misc</a>
-        <a href="../personal/">personal</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container center">
-
-    <section>
-      <h2>notes</h2>
-      <p>Reading notes, lecture notes and expository writings. (If you are using my notes as reference and found a typo, dm wilo_thewisp on discord)</p>
-      <ul class="note-list">
-        <li>
-          <h3><a href="../files/notes/random-matrix-products.pdf">Random matrix products <span class="note-format">PDF</span></a></h3>
-          <p class="note-kind">Reading notes · MAT495</p>
-          <p>Notes on Lyapunov exponents, stationary measures, and random matrix products, following Bougerol and Lacroix.</p>
-        </li>
-        <li>
-          <h3><a href="../files/notes/pontryagin-duality.pdf">Pontryagin duality <span class="note-format">PDF</span></a></h3>
-          <p class="note-kind">Expository essay · MAT436</p>
-          <p>An exposition of Pontryagin duality and harmonic analysis on locally compact abelian groups, beginning with the integers and the circle group.</p>
-        </li>
-        <li>
-          <h3><a href="../files/notes/psw.pdf">PSW — Anosov representations <span class="note-format">PDF</span></a></h3>
-          <p class="note-kind">Reading notes · PSW</p>
-          <p>Notes on word-hyperbolic groups, the Gromov boundary, Anosov representations and Hausdorff dimension bounds for limit sets.</p>
-        </li>
-        <li>
-          <h3><a href="../files/notes/limit-sets-and-flag-varieties.pdf">Limit sets and flag varieties <span class="note-format">PDF</span></a></h3>
-          <p class="note-kind">Research notes · MAT495</p>
-          <p>Notes on Cartan and Jordan decompositions, proximality, limit sets and flag varieties.</p>
-        </li>
-        <li>
-          <h3><a href="../files/notes/mat464.pdf">MAT464 — Differential geometry <span class="note-format">PDF</span></a></h3>
-          <p class="note-kind">Lecture notes · Fall 2026</p>
-          <p>Notes based on the professor's lectures, covering smooth manifolds, Lie groups, Riemannian metrics, connections, geodesics and curvature.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>other</h2>
-      <p>Occasional writing that isn't mathematics but isn't personal either.
-        Currently empty, which is itself a kind of statement.</p>
-    </section>
-
-  </main>
-
-  <footer class="site-foot">
-    <div class="container bar">
-      <span id="updated">last updated —</span>
-    </div>
-  </footer>
-
-  <script>
-    let p = location.pathname.split("/personal-website/")[1] || "";
-    if (!p.endsWith(".html")) p += "index.html";
-    fetch("https://api.github.com/repos/limelite-vista/personal-website/commits?per_page=1&path=" + p)
-        .then(r => r.json())
-        .then(d => {
-            const t = new Date(d[0].commit.committer.date);
-            document.getElementById("updated").textContent =
-                "last updated " + t.toISOString().slice(0, 10);
-        })
-        .catch(() => { });
-</script>
+    <main class="container">
+        <section>
+            <h1>Notes have moved</h1>
+            <p><a href="../Notes/">Read my notes.</a></p>
+        </section>
+    </main>
 </body>
-
 </html>
