@@ -48,6 +48,7 @@ main.container { max-width: var(--measure); }
 .skip-link { position: absolute; left: 1rem; top: -5rem; background: var(--panel); padding: .5rem 1rem; z-index: 10; }
 .skip-link:focus { top: 1rem; }
 main section { margin-block: 2.5rem; padding-block: 2rem; border-top: 4px solid var(--accent); }
+main.center > section:first-child { border-top: 0; }
 .masthead { border: 0; padding-block: 3rem 1rem; }
 .masthead h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.8rem, 7vw, 5rem); line-height: 1.1; letter-spacing: -.055em; overflow-wrap: anywhere; }
 .masthead .tagline, .eyebrow, .section-label { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
